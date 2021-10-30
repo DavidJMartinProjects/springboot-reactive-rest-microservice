@@ -27,4 +27,12 @@ public class ProductService {
         return productRepository.findByName(name);
     }
 
+    public Mono<Product> save(Product product) {
+        return productRepository.save(product);
+    }
+
+    public Mono<Void> deleteById(long id) {
+        return productRepository.deleteById(id);
+    }
+
 }
