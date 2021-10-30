@@ -44,7 +44,7 @@ public class ProductController {
     public Mono<Product> updateProduct(@RequestBody Product product) {
         return productService
             .findByName(product.getName())
-            .flatMap(memberResult -> productService.save(product));
+            .flatMap(productResult -> productService.save(product));
     }
 
     @DeleteMapping
